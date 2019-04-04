@@ -6,21 +6,22 @@ begin
   Bundler.setup(:default, :development)
 rescue Bundler::BundlerError => e
   $stderr.puts e.message
-  $stderr.puts "Run `bundle install` to install missing gems"
+  $stderr.puts 'Run `bundle install` to install missing gems'
   exit e.status_code
 end
 require 'rake'
 
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
-  # gem is a Gem::Specification... see http://guides.rubygems.org/specification-reference/ for more options
-  gem.name = "activerecord-postgres-json"
-  gem.homepage = "http://github.com/romanbsd/activerecord-postgres-json"
+  # gem is a Gem::Specification...
+  # see http://guides.rubygems.org/specification-reference/ for more options
+  gem.name = 'activerecord-postgres-json-rails4'
+  gem.homepage = 'http://github.com/vhl/activerecord-postgres-json-rails4'
   gem.license = "MIT"
-  gem.summary = %Q{Active Record support for PostgreSQL JSON type}
+  gem.summary = %Q{ActiveRecord support for PostgreSQL JSON type supporting Rails 4.0-4.1}
   gem.description = gem.summary
-  gem.email = "romanbsd@yahoo.com"
-  gem.authors = ["Roman Shterenzon"]
+  gem.email = ['romanbsd@yahoo.com', 'nathan.benes@gmail.com']
+  gem.authors = ['Roman Shterenzon', 'Nathan Benes']
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
@@ -33,7 +34,7 @@ end
 
 desc "Code coverage detail"
 task :simplecov do
-  ENV['COVERAGE'] = "true"
+  ENV['COVERAGE'] = 'true'
   Rake::Task['spec'].execute
 end
 
@@ -41,10 +42,10 @@ task :default => :spec
 
 require 'rdoc/task'
 Rake::RDocTask.new do |rdoc|
-  version = File.exist?('VERSION') ? File.read('VERSION') : ""
+  version = File.exist?('VERSION') ? File.read('VERSION') : ''
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "activerecord-postgres-json #{version}"
+  rdoc.title = "activerecord-postgres-json-rails4 #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end

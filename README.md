@@ -1,6 +1,14 @@
-# activerecord-postgres-json
+# activerecord-postgres-json-rails4
 
-A minimal JSON/JSONB column type support for ActiveRecord 3.2.x
+Based off https://github.com/romanbsd/activerecord-postgres-json, including
+changes from rails-4-support branch
+https://github.com/nzifnab/activerecord-postgres-json/tree/rails-4-support
+
+Gem name changed from the original to allow it to be included in gemspec
+file of other gems, which doesn't allow specifying github sources with
+specific branches.
+
+A minimal JSON/JSONB column type support for ActiveRecord 3.2.x through 4.1.x
 This gem adds the following support:
 
 1. Using json/jsonb column type in migrations, e.g. `add_column :foo, :bar, :json` or `add_column :foo, :bar, :jsonb`
@@ -20,13 +28,7 @@ User.first.settings[:show_popups] # => true
 
 ## Contributing to activerecord-postgres-json
 
-* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
-* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
-* Fork the project.
-* Start a feature/bugfix branch.
-* Commit and push until you are happy with your contribution.
-* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
-* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+See https://github.com/romanbsd/activerecord-postgres-json#contributing-to-activerecord-postgres-json
 
 ## Copyright
 

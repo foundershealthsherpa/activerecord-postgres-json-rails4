@@ -5,7 +5,7 @@ gem 'multi_json'
 
 # v11 has a removed method that rspec-core < 3.4.4 uses.
 # See: https://stackoverflow.com/questions/35893584/nomethoderror-undefined-method-last-comment-after-upgrading-to-rake-11
-gem 'rake', '< 11.0'
+gem 'rake', '<= 13.0.1'
 
 group :development, :test do
   gem 'rspec', '~> 2.0'
